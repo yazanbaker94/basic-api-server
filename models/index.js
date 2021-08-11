@@ -2,12 +2,14 @@
 
 const POSTGRES_URI = "postgres://localhost:5432/testing";
 const { Sequelize, DataTypes } = require('sequelize');
-const people = require('./people.model');
+const food = require('./food.model');
+const animal = require('./animal.model');
 
 let sequelize = new Sequelize(POSTGRES_URI, {});
 
 // lets define our Schema
 module.exports = {
-    People: people(sequelize, DataTypes),
+    Food: food(sequelize, DataTypes),
+    Animal: animal(sequelize, DataTypes),
     db: sequelize
 }

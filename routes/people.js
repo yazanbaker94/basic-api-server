@@ -3,48 +3,48 @@
 const express = require('express');
 
 const router = express.Router();
-const {People} = require('../models/index');
+const {Food} = require('../models/index');
 // add routes
-router.get('/people', getPeople);
-router.get('/people/:id', getOnePerson);
+router.get('/food', getFood);
+router.get('/food/:id', getOneFood);
 
-router.post('/people', createPerson);
-router.put('/people/:id', updatePerson);
-router.delete('/people/:id', deletePerson);
+router.post('/food', createFood);
+router.put('/food/:id', updateFood);
+router.delete('/food/:id', deleteFood);
 
 
-async function getPeople(req, res) {
+async function getFood(req, res) {
     // get me all data from people
-    let people = await People.findAll();
-    res.status(200).json(people);
+    let food = await Food.findAll();
+    res.status(200).json(food);
 }
 
-async function getOnePerson(req, res) {
+async function getOneFood(req, res) {
     const id = parseInt(req.params.id); // req.params is an object 
-    let person = await People.findOne({ where: {id: id} });
-    res.status(200).json(person);
+    let food = await Food.findOne({ where: {id: id} });
+    res.status(200).json(food);
 }
 
-async function createPerson(req, res) {
-    let newPerson = req.body;
-    let person = await People.create(newPerson);
-    res.status(200).json(person);
+async function createFood(req, res) {
+    let newFood = req.body;
+    let food = await Food.create(newFood);
+    res.status(200).json(food);
 }
 
-async function updatePerson(req, res) {
+async function updateFood(req, res) {
     let id = parseInt(req.params.id);
     let obj = req.body;
     // find the person
-    let found = await People.findOne({ where: {id: id} });
+    let found = await Food.findOne({ where: {id: id} });
     // update the person + save
-    let updatedPerson = await found.update(obj);
-    res.status(200).json(updatedPerson);
+    let updatedFood = await found.update(obj);
+    res.status(200).json(updatedFood);
 }
 
-async function deletePerson(req,res) {
+async function deleteFood(req,res) {
     let id = parseInt(req.params.id);
-    let deletedPerson = await People.destroy({where: {id: id}});
-    res.status(204).json(deletedPerson);
+    let deletedFood = await Food.destroy({where: {id: id}});
+    res.status(204).json(deletedFood);
 }
 
 
