@@ -6,7 +6,7 @@ DEPLOYED  QUERY: https://yazan-basic-api-server.herokuapp.com/people
 https://yazan-basic-api-server.herokuapp.com/animal
 
 
-![UML](LAB3.png "Reverse")
+![UML](LAB3.PNG "Reverse")
 
 
 
