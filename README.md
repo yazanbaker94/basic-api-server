@@ -6,7 +6,9 @@ DEPLOYED  QUERY: https://yazan-basic-api-server.herokuapp.com/people
 https://yazan-basic-api-server.herokuapp.com/animal
 
 
-![UML](LAB3.png "UML")
+![UML](LAB3.png "Reverse")
+
+
 
 How do I install the app or library?
 
