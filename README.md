@@ -5,6 +5,9 @@ DEPLOYED VERSION ON HEROKU: https://yazan-basic-api-server.herokuapp.com/
 DEPLOYED  QUERY: https://yazan-basic-api-server.herokuapp.com/people
 https://yazan-basic-api-server.herokuapp.com/animal
 
+
+![UML](LAB3.png "UML")
+
 How do I install the app or library?
 
 Clone repo on your local machine
